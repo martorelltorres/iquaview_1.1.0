@@ -1,0 +1,16 @@
+<!--Config file to customize the AUV launch files that can be called within the interface -->
+<list>
+    <launch>
+        <launch_name>s2_start</launch_name>
+        <launch_command>roslaunch cola2_s2 s2_start.launch</launch_command>
+    </launch>
+    <launch>
+        <launch_name>sim_s2_start</launch_name>
+        <launch_command>roslaunch cola2_s2 sim_s2_start.launch</launch_command>
+    </launch>
+    <launch>
+        <launch_name>sim_g500_start</launch_name>
+        <launch_command>roslaunch cola2_g500 sim_g500_start.launch</launch_command>
+    </launch>
+</list>
+

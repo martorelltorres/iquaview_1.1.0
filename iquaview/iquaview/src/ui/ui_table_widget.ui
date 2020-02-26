@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Table</class>
+ <widget class="QWidget" name="Table">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>732</width>
+    <height>227</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>507</width>
+       <height>148</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>Current Pose</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Desired Pose</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Current Twist</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Desired Twist</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Roll</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Pitch</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Yaw</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="0" column="1">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="0" column="2">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="0" column="5">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="1" column="1">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="1" column="2">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="1" column="5">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="2" column="5">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="3" column="1">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="3" column="2">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="3" column="3">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="3" column="4">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item row="3" column="5">
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,454 @@
+<!--Config file to customize the AUV parameters and actions accessible within the interface.
+
+ ros_params tag defines the parameters that can be configured throughout the interface
+
+ organized in different sections
+
+ mission_actions tag defines the actions that can be called in a mission waypoint
+
+ -->
+<config>
+    <vehicle_info>
+        <vehicle_ip>127.0.0.1</vehicle_ip>
+        <vehicle_port>8888</vehicle_port>
+        <vehicle_type>sparus2</vehicle_type>
+        <vehicle_name>Sparus II AUV</vehicle_name>
+        <vehicle_width>0.5</vehicle_width>
+        <vehicle_length>1.6</vehicle_length>
+        <vehicle_code>error_code</vehicle_code>
+        <user>user</user>
+        <remote_missions_path>/home/user/catkin_ws/src/cola2_s2/missions</remote_missions_path>
+    </vehicle_info>
+    <ros_params>
+        <section>
+          <description> Navigation </description>
+          <param>
+            <description>NED latitude</description>
+            <field>
+                <field_name>/navigator/ned_latitude</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+            <description>NED longitude</description>
+            <field>
+                <field_name>/navigator/ned_longitude</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Initialize filter from GPS</description>
+            <field>
+                <field_name>/navigator/initialize_filter_from_gps</field_name>
+                <field_type>boolean</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Use GPS data</description>
+            <field>
+                <field_name>/navigator/use_gps_data</field_name>
+                <field_type>boolean</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Initialize NED from GPS</description>
+            <field>
+                <field_name>/navigator/initialize_ned_from_gps</field_name>
+                <field_type>boolean</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Magnetic declination (degrees)</description>
+            <field>
+                <field_name>/navigator/declination_in_degrees</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Use USBL data</description>
+            <field>
+                <field_name>/navigator/use_usbl_data</field_name>
+                <field_type>boolean</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Water density (1000 fresh water, 1030 sea water)</description>
+            <field>
+                <field_name>/navigator/water_density</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <action_id>/cola2_navigation/reset_navigation</action_id>
+        </section>
+        <section>
+          <description> Safety </description>
+          <param>
+            <description>Watchdog timeout (seconds)</description>
+            <field>
+                <field_name>/safety/timeout</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Wifi watchdog timeout (seconds)</description>
+            <field>
+                <field_name>/safety/min_wifi_update</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+          <description>Modem watchdog timeout (seconds)</description>
+            <field>
+                <field_name>/safety/min_modem_update</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+
+          <param>
+          <description>Maximum allowed depth (meters)</description>
+            <field>
+                <field_name>/safe_depth_altitude/max_depth</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+          <description>Minimum allowed altitude (meters)</description>
+            <field>
+                <field_name>/safe_depth_altitude/min_altitude</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <param>
+            <description>Maximum distance to a waypoint</description>
+            <field>
+                <field_name>/captain/max_distance_to_waypoint</field_name>
+                <field_type>double</field_type>
+            </field>
+          </param>
+          <action_id>/cola2_safety/reload_safety_params</action_id>
+
+        </section>
+          <section>
+              <description> Control </description>
+              <param>
+                 <description>Teleoperation max. velocity (u, v, w, r, p, q)</description>
+                 <field_array>
+                     <field_array_name>/teleoperation/max_vel</field_array_name>
+                     <field_array_type>double</field_array_type>
+                     <field_array_size>6</field_array_size>
+                 </field_array>
+              </param>
+              <param>
+                 <description>Teleoperation min. velocity (u, v, w, r, p, q)</description>
+                 <field_array>
+                     <field_array_name>/teleoperation/min_vel</field_array_name>
+                     <field_array_type>double</field_array_type>
+                     <field_array_size>6</field_array_size>
+                 </field_array>
+              </param>
+              <action_id>/cola2_control/reload_joystick_config</action_id>
+          </section>
+          <section>
+            <description>Modem</description>
+						<param>
+	            <description>Modem ID</description>
+	            <field>
+	                <field_name>/evologics_modem/ownid</field_name>
+	                <field_type>double</field_type>
+	            </field>
+	          </param>
+						<param>
+	            <description>USBL ID</description>
+	            <field>
+	                <field_name>/evologics_modem/outid</field_name>
+	                <field_type>double</field_type>
+	            </field>
+	          </param>
+						<param>
+	            <description>Source level (3 min, 0 max)</description>
+	            <field>
+	                <field_name>/evologics_modem/sourcelevel</field_name>
+	                <field_type>double</field_type>
+	            </field>
+	          </param>
+              <param>
+                 <description>Modem head tf (x, y, z)</description>
+                 <field_array>
+                     <field_array_name>/evologics_modem/tf</field_array_name>
+                     <field_array_type>double</field_array_type>
+                     <field_array_size>3</field_array_size>
+                 </field_array>
+              </param>
+              <action_id>/evologics_modem/reload_configurations</action_id>
+         </section>
+            <section>
+            <description>Multibeam</description>
+        </section>
+    </ros_params>
+
+    <mission_actions>
+			<action>
+				<action_name>Enable thrusters</action_name>
+				<action_id>/cola2_control/enable_thrusters</action_id>
+				<action_description>Enable AUV thrusters</action_description>
+			</action>
+            <action>
+                <action_name>Disable thrusters</action_name>
+                <action_id>/cola2_control/disable_thrusters</action_id>
+                <action_description>Disable AUV thrusters</action_description>
+            </action>
+			<action>
+                <action_name>Enable bag (logger)</action_name>
+                <action_id>/enable_logs</action_id>
+                <action_description>Enable AUV bag recorder</action_description>
+            </action>
+			<action>
+                <action_name>Disable bag (logger)</action_name>
+                <action_id>/disable_logs</action_id>
+                <action_description>Disable AUV bag recorder</action_description>
+            </action>
+			<action>
+                <action_name>Enable multibeam</action_name>
+                <action_id>/multibean/enable</action_id>
+                <action_description>Enable multibeam sensor</action_description>
+                <param_list>
+                    <param>
+                        <param_name>Range</param_name>
+                        <param_type>unsigned int</param_type>
+                    </param>
+                    <param>
+                        <param_name>Gain</param_name>
+                        <param_type>unsigned int</param_type>
+                    </param>
+                </param_list>
+            </action>
+			<action>
+                <action_name>Disable multibeam</action_name>
+                <action_id>/multibeam/disable</action_id>
+                <action_description>Disable multibeam sensor</action_description>
+            </action>
+    </mission_actions>
+    <check_lists>
+        <check_list id="ondeck">
+            <check_item>
+                <description>IMU raw data</description>
+                <check_topic>
+                    <name>Accelerometer</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/adis_imu_data</topic_name>
+                        <field>
+                            <field_name>AY</field_name>
+                            <field_description>Gravity vector</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+                <check_topic>
+                    <name>Orientation</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/nav_sts</topic_name>
+                        <field>
+                            <field_name>orientation/roll</field_name>
+                            <field_description>Roll</field_description>
+                        </field>
+                        <field>
+                            <field_name>orientation/pitch</field_name>
+                            <field_description>Pitch</field_description>
+                        </field>
+                        <field>
+                            <field_name>orientation/yaw</field_name>
+                            <field_description>Yaw</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+            </check_item>
+            <check_item>
+                <description>GPS data</description>
+                <check_topic>
+                    <name>GPS status</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/fastrax_it_500_gps</topic_name>
+                        <field>
+                            <field_name>data_quality</field_name>
+                            <field_description>Data quality (0:Invalid, 1:GPS Fix, 2:DGPS fix)</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+                <check_topic>
+                    <name>Position</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/nav_sat_fix</topic_name>
+                        <field>
+                            <field_name>latitude</field_name>
+                            <field_description>Latitude</field_description>
+                        </field>
+                        <field>
+                            <field_name>longitude</field_name>
+                            <field_description>Longitude</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+            </check_item>
+            <check_item>
+                <description>WARNING: Thrusters test. Clear the space around thrusters before executing the test!</description>
+                <check_action>
+                    <name>Test Thrusters</name>
+                    <action_id>/cola2_safety/test_thrusters</action_id>
+                    <parameters>
+                        <param>0.15</param>
+                        <param>0.15</param>
+                        <param>0.15</param>
+                    </parameters>
+                </check_action>
+            </check_item>
+        </check_list>
+        <check_list id="predive">
+            <check_item>
+                <description>Pressure Sensor</description>
+                <check_topic>
+                    <name>Pressure and Temperature</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/pressure_sensor</topic_name>
+                        <field>
+                            <field_name>pressure</field_name>
+                            <field_description>Pressure</field_description>
+                        </field>
+                        <field>
+                            <field_name>temperature</field_name>
+                            <field_description>&#186;C</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+            </check_item>
+            <check_item>
+                <description>IMU raw data</description>
+                <check_topic>
+                    <name>Accelerometer</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/adis_imu_data</topic_name>
+                        <field>
+                            <field_name>AY</field_name>
+                            <field_description>Gravity vector</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+                <check_topic>
+                    <name>Orientation</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/nav_sts</topic_name>
+                        <field>
+                            <field_name>orientation/roll</field_name>
+                            <field_description>Roll</field_description>
+                        </field>
+                        <field>
+                            <field_name>orientation/pitch</field_name>
+                            <field_description>Pitch</field_description>
+                        </field>
+                        <field>
+                            <field_name>orientation/yaw</field_name>
+                            <field_description>Yaw</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+            </check_item>
+            <check_item>
+                <description>GPS data</description>
+                <check_topic>
+                    <name>GPS status</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/fastrax_it_500_gps</topic_name>
+                        <field>
+                            
+                            <field_name>data_quality</field_name>
+                            <field_description>Data quality (0:Invalid, 1:GPS Fix, 2:DGPS fix)</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+                <check_topic>
+                    <name>Position</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/nav_sat_fix</topic_name>
+                        <field>
+                            
+                            <field_name>latitude</field_name>
+                            <field_description>Latitude</field_description>
+                        </field>
+                        <field>
+                            <field_name>longitude</field_name>
+                            <field_description>Longitude</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+            </check_item>
+            <check_item>
+                <description>DVL data (in sensor axis)</description>
+                <check_topic>
+                    <name>DVL velocity (dm/s), -32.7680 --&gt; Invalid data</name>
+                    <topic>
+                        <topic_name>/cola2_navigation/teledyne_explorer_dvl</topic_name>
+                        <field>
+                            <field_name>bi_x_axis</field_name>
+                            <field_description>Bottom X</field_description>
+                        </field>
+                        <field>
+                            <field_name>bi_y_axis</field_name>
+                            <field_description>Bottom Y</field_description>
+                        </field>
+                        <field>
+                            <field_name>bi_z_axis</field_name>
+                            <field_description>Bottom Z</field_description>
+                        </field>
+                        <field>
+                            <field_name>bi_error</field_name>
+                            <field_description>Bottom stauts</field_description>
+                        </field>
+                        <field>
+                            <field_name>wi_x_axis</field_name>
+                            <field_description>Water X</field_description>
+                        </field>
+                        <field>
+                            <field_name>wi_y_axis</field_name>
+                            <field_description>Water Y</field_description>
+                        </field>
+                        <field>
+                            <field_name>wi_z_axis</field_name>
+                            <field_description>Water Z</field_description>
+                        </field>
+                        <field>
+                            <field_name>wi_error</field_name>
+                            <field_description>Water stauts</field_description>
+                        </field>
+                        <field>
+                            <field_name>bd_range</field_name>
+                            <field_description>Bottom range</field_description>
+                        </field>
+                    </topic>
+                </check_topic>
+            </check_item>
+        </check_list>
+    </check_lists>
+    <vehicle_data_topics>
+        <topic id="merged world waypoint req">/cola2_control/merged_world_waypoint_req_hz</topic>
+        <topic id="merged body velocity req">/cola2_control/merged_body_velocity_req_hz</topic>
+        <topic id="navigation status">/cola2_navigation/nav_sts_hz</topic>
+        <topic id="safety supervisor status">/cola2_safety/safety_supervisor_status</topic>
+        <topic id="total time">/cola2_safety/total_time</topic>
+        <topic id="vehicle status">/cola2_safety/vehicle_status</topic>
+        <topic id="goto status">/world_waypoint_req/status</topic>
+        <topic id="thruster setpoints">/cola2_control/thruster_data_hz</topic>
+    </vehicle_data_topics>
+    <vehicle_data_services>
+        <service id="calibrate magnetometer">/imu_angle_estimator/calibrate_magnetometer</service>
+        <service id="keep position">/cola2_control/enable_keep_position_3dof</service>
+        <service id="disable keep position">/cola2_control/disable_keep_position</service>
+        <service id="reset timeout">/cola2_safety/reset_timeout</service>
+        <service id="enable goto">/cola2_control/enable_goto</service>
+        <service id="disable goto">/cola2_control/disable_goto</service>
+        <service id="enable thrusters">/cola2_control/enable_thrusters</service>
+        <service id="disable thrusters">/cola2_control/disable_thrusters</service>
+        <service id="enable mission">/cola2_control/play_default_mission_non_block</service>
+        <service id="disable mission">/cola2_control/disable_trajectory</service>
+    </vehicle_data_services>
+    <launch_list>
+        <launch id="teleoperation">roslaunch cola2_s2 s2_teleoperation.launch</launch>
+    </launch_list>
+</config>

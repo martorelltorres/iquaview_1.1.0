@@ -1,0 +1,74 @@
+<RCC>
+  <qresource prefix="/">
+    <file>resources/iquaview.png</file>
+    <file>resources/iquaview_vector.svg</file>
+    <file>resources/refresh.png</file>
+    <file>resources/pickPointInMap.svg</file>
+    <file>resources/mActionFileNew.svg</file>
+    <file>resources/mActionFileOpen.svg</file>
+    <file>resources/mActionSaveAs.svg</file>
+    <file>resources/mActionSave.svg</file>
+    <file>resources/mActionFileExit.png</file>
+    <file>resources/mActionPan.svg</file>
+    <file>resources/mActionZoomOut.png</file>
+    <file>resources/mActionZoomIn.png</file>
+    <file>resources/mActionAddLayer.png</file>
+    <file>resources/mActionAddLandmarkPoint.svg</file>
+    <file>resources/mActionMoveLandmarkPoint.svg</file>
+    <file>resources/mActionMeasure.png</file>
+    <file>resources/mActionMeasureAngle.svg</file>
+    <file>resources/mActionMeasureArea.svg</file>
+    <file>resources/mActionConnectionSettings.svg</file>
+    <file>resources/mActionOptions.svg</file>
+    <file>resources/mActionAUVConfigParameters.svg</file>
+    <file>resources/mActionCheckList.svg</file>
+    <file>resources/mActionBoatPose.svg</file>
+    <file>resources/mActionEnableKeepPosition.svg</file>
+    <file>resources/mActionDisableKeepPosition.svg</file>
+    <file>resources/mActionEnableThrusters.svg</file>
+    <file>resources/mActionDisableThrusters.svg</file>
+    <file>resources/mActionExecuteMissionAcoustic.svg</file>
+    <file>resources/mActionStopMissionAcoustic.svg</file>
+    <file>resources/mActionNewMission.svg</file>
+    <file>resources/mActionLoadMissionFile.svg</file>
+    <file>resources/mActionSendMission.svg</file>
+    <file>resources/mActionSaveMission.svg</file>
+    <file>resources/mActionSaveAsMission.svg</file>
+    <file>resources/mActionExecuteMission.svg</file>
+    <file>resources/mActionStopMission.svg</file>
+    <file>resources/mActionEditWaypoints.svg</file>
+    <file>resources/mActionEditMultipleWaypoints.svg</file>
+    <file>resources/mActionAddMissionTemplate.svg</file>
+    <file>resources/mActionMoveMission.svg</file>
+    <file>resources/arrow.svg</file>
+    <file>resources/green_led.svg</file>
+    <file>resources/red_led.svg</file>
+    <file>resources/Green_tick.svg</file>
+    <file>resources/Red_X.svg</file>
+    <file>resources/joystick.png</file>
+    <file>resources/goto.svg</file>
+    <file>resources/stopGoto.svg</file>
+    <file>resources/actionResetTimeout.svg</file>
+    <file>resources/compass.svg</file>
+    <file>resources/robot_monitor.svg</file>
+    <file>resources/Star2.svg</file>
+    <file>resources/converter.svg</file>
+    <file>resources/mActionCopyClipboard.svg</file>
+    <file>resources/vessel.svg</file>
+    <file>resources/mActionUSBLUpdatesOn.svg</file>
+    <file>resources/mActionUSBLUpdatesOff.svg</file>
+
+    <file>resources/sparus2/mActionAUVPose.svg</file>
+    <file>resources/sparus2/mActionAUVPoseUSBL.svg</file>
+    <file>resources/sparus2/mActionAbortAndSurfaceAcoustic.svg</file>
+    <file>resources/sparus2/mActionEmergencySurfaceAcoustic.svg</file>
+    <file>resources/sparus2/vehicle.svg</file>
+
+    <file>resources/girona500/vehicle.svg</file>
+    <file>resources/girona500/mActionAUVPose.svg</file>
+    <file>resources/girona500/mActionAUVPoseUSBL.svg</file>
+    <file>resources/girona500/mActionAbortAndSurfaceAcoustic.svg</file>
+    <file>resources/girona500/mActionEmergencySurfaceAcoustic.svg</file>
+
+  </qresource>
+</RCC>

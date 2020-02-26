@@ -1,0 +1,59 @@
+# IQUAview
+
+IQUAview is the graphical user interface (GUI) that allows to operate the family of vehicles from Iqua Robotics in a simple and user-friendly manner. IQUAview provides a front-end to the COLA2 architecture in order to be able to communicate with the robot, configure a basic set of parameters, plan missions and monitor them using an intuitive graphical interface.
+
+# Basic features
+
+- Customization of the interface display with raster maps, vector charts or contextual information of the operational site in a large number of supported data formats.
+- Easy access to vehicle and sensors configuration, pre-dive checks and routine procedures (teleoperation mode, calibration, status monitoring, etc).
+- Graphical mission programming providing flexibility in the design through individual waypoint customization or the addition of predefined mission patterns.
+- Command and monitoring of the vehicle through WiFi connection (using surface buoy or vehicle WiFi antenna).
+
+Contact Iqua Robotics regarding plugin options (e.g, command and monitoring through acoustics, quick bathymetry processing, etc).
+
+# User manual 
+
+Download [IQUAview's user manual](https://bitbucket.org/iquarobotics/iquaview/wiki/IQUAview_user_manual.pdf) to learn in more detail the different features of IQUAview and how to use the interface to operate the vehicles of Iqua Robotics. 
+You can test IQUAview together with a simulated instance of the software architecture of IQUA's vehicles. For that, check first the [COLA2 wiki](https://bitbucket.org/iquarobotics/cola2_core/wiki/Home).
+
+
+# Installation:
+
+* Install Python3 dependencies:
+
+        sudo apt-get install python3-serial python3-matplotlib python3-lxml python3-pyqt5
+
+* Prepare APT sources:
+
+    Add the following lines to your /etc/apt/sources.list (based on <https://www.qgis.org/en/site/forusers/download.html> installation process) :
+
+    * For Ubuntu 16.04:
+
+            deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu xenial main
+            deb https://qgis.org/ubuntugis-ltr xenial main
+            deb-src https://qgis.org/ubuntugis-ltr xenial main
+
+    * For Ubuntu 18.04:
+
+            deb https://qgis.org/ubuntu-ltr bionic main
+
+* Run:
+
+        sudo apt-get update  
+        sudo apt-get install qgis python-qgis qgis-plugin-grass
+
+* In case of keyserver errors add the ubuntugis public key:
+
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key KEY_VALUE
+
+* After adding keys, run again the following lines:
+
+        sudo apt-get update  
+        sudo apt-get install qgis python-qgis qgis-plugin-grass
+
+## Launching IQUAview
+
+Inside the iquaview folder:
+```
+./run.sh
+```
